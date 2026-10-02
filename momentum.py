@@ -1,0 +1,5 @@
+print("*** E=MC^2 ***")
+M=float(input("Enter the mass of the object (kg): "))
+C=float(input("Enter the speed of light (m/s): "))
+E=M*(C**2)
+print("Momentum of the object is: {:.2f} kgm^2/s^2".format(E))
