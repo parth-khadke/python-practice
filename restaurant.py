@@ -22,16 +22,17 @@ class Restaurant():
         self.number_served += count
         
 
-restaurant = Restaurant("Olive Garden", "Continental")
+class IceCreamStand(Restaurant):
+    def __init__(self, restaurant_name, cuisine_type):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = ["Vanilla", "Butterscotch", "Strawberry", "Lotus Biscoff", "Pista"]
 
-print(restaurant.describe_restaurant())
-print(restaurant.open_restaurant())
+    def ShowFlavors(self):
+        print('Available Flavors:')
+        for i in self.flavors:
+            print(i, end=", ")
 
-print(restaurant.number_served)
+    
+IceCreamParlour = IceCreamStand("Perfect Cold", "Ice Cream")
 
-restaurant.set_number_served(25)
-print(restaurant.number_served)
-
-restaurant.increment_number_served(5)
-print(restaurant.number_served)
-
+IceCreamParlour.ShowFlavors()
